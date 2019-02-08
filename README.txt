@@ -18,7 +18,7 @@ Laurel and Hardy each contain abilitites only one character can execute:
 	class: Laurel: DoubleJump(), RangedAttack() / TrowHat(), CatchHat()
 	class: Hardy: MeleeAttack(), JumpKill()
 	attributes such as jumpHeight or movementSpeed can be adjusted for every character individually
-class: Playermanager is responsible for Shapeshifting(), including the transfer of information between Laurel and Hardy (e.g. rotation, velocity, ...)
+	class: Playermanager is responsible for Shapeshifting(), including the transfer of information between Laurel and Hardy (e.g. rotation, velocity, ...)
 
 class: Enemy contains all abilites every type of enemy shares: Spawn(), Die(), Grow() etc.
 class: MovingEnemy contains ability to Move() back and forth - Lobsters and Enemies inherit from this class
