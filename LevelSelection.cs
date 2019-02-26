@@ -31,12 +31,14 @@ void Start()
         SceneManager.UnloadSceneAsync(14);
         SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(1));
 
-        if (!(PlayerPrefs.GetFloat("Episode1_v2", 0) > 0)) GameObject.Find("Ep. 2").SetActive(false);
-        if (!(PlayerPrefs.GetFloat("Episode2_v2", 0) > 0)) GameObject.Find("Ep. 3").SetActive(false);
-        if (!(PlayerPrefs.GetFloat("Episode3_v2", 0) > 0)) GameObject.Find("Ep. 4").SetActive(false);
-        if (!(PlayerPrefs.GetFloat("Episode4_v2", 0) > 0)) GameObject.Find("Ep. 5").SetActive(false);
-        if (!(PlayerPrefs.GetFloat("Episode5_v2", 0) > 0)) GameObject.Find("Ep. 6").SetActive(false);
-        if (!(PlayerPrefs.GetFloat("Episode6_v2", 0) > 0)) GameObject.Find("Ep. 7").SetActive(false);
+        for (int lvl = 1; lvl < 7; lvl++)
+        {
+            if (!(PlayerPrefs.GetFloat("Episode" + lvl.ToString() + "_v2", 0) > 0))
+            {
+                int nextLvl = lvl + 1;
+                GameObject.Find("Ep. " + nextLvl.ToString()).SetActive(false);
+            }
+        }
 }
    
 
